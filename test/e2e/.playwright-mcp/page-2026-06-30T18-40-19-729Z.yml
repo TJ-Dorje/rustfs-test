@@ -1,0 +1,230 @@
+- generic [ref=f3e2]:
+  - alert [ref=f3e1]
+  - generic [ref=f3e3]:
+    - generic [ref=f3e6]:
+      - link [ref=f3e201] [cursor=pointer]:
+        - /url: /rustfs/console/browser/
+        - img [ref=f3e202]
+      - generic [ref=f3e13]:
+        - generic [ref=f3e14]:
+          - list [ref=f3e16]:
+            - listitem [ref=f3e17]:
+              - link [ref=f3e203] [cursor=pointer]:
+                - /url: /rustfs/console/browser/
+                - img [ref=f3e19]
+                - generic [ref=f3e21]: Browser
+            - listitem [ref=f3e22]:
+              - link [ref=f3e204] [cursor=pointer]:
+                - /url: /rustfs/console/access-keys/
+                - img [ref=f3e24]
+                - generic [ref=f3e26]: Access Keys
+            - listitem [ref=f3e27]:
+              - link [ref=f3e205] [cursor=pointer]:
+                - /url: /rustfs/console/policies/
+                - img [ref=f3e29]
+                - generic [ref=f3e31]: Policies
+            - listitem [ref=f3e32]:
+              - link [ref=f3e206] [cursor=pointer]:
+                - /url: /rustfs/console/users/
+                - img [ref=f3e34]
+                - generic [ref=f3e36]: Users
+            - listitem [ref=f3e37]:
+              - link [ref=f3e207] [cursor=pointer]:
+                - /url: /rustfs/console/user-groups/
+                - img [ref=f3e39]
+                - generic [ref=f3e41]: User Groups
+            - listitem [ref=f3e42]:
+              - link [ref=f3e208] [cursor=pointer]:
+                - /url: /rustfs/console/import-export/
+                - img [ref=f3e44]
+                - generic [ref=f3e46]: Import/Export
+            - listitem [ref=f3e47]:
+              - link [ref=f3e209] [cursor=pointer]:
+                - /url: /rustfs/console/status/
+                - img [ref=f3e49]
+                - generic [ref=f3e51]: Running Status
+            - listitem [ref=f3e52]:
+              - link [ref=f3e210] [cursor=pointer]:
+                - /url: /rustfs/console/rebalance/
+                - img [ref=f3e54]
+                - generic [ref=f3e56]: Rebalance
+            - listitem [ref=f3e57]:
+              - link [ref=f3e211] [cursor=pointer]:
+                - /url: /rustfs/console/pool-decommission/
+                - img [ref=f3e59]
+                - generic [ref=f3e61]: Pool Decommission
+          - separator [ref=f3e62]
+        - generic [ref=f3e63]:
+          - list [ref=f3e65]:
+            - listitem [ref=f3e66]:
+              - link [ref=f3e212] [cursor=pointer]:
+                - /url: /rustfs/console/events/
+                - img [ref=f3e68]
+                - generic [ref=f3e70]: Bucket Events
+            - listitem [ref=f3e71]:
+              - link [ref=f3e213] [cursor=pointer]:
+                - /url: /rustfs/console/replication/
+                - img [ref=f3e73]
+                - generic [ref=f3e75]: Bucket Replication
+            - listitem [ref=f3e76]:
+              - link [ref=f3e214] [cursor=pointer]:
+                - /url: /rustfs/console/lifecycle/
+                - img [ref=f3e78]
+                - generic [ref=f3e80]: Lifecycle
+            - listitem [ref=f3e81]:
+              - link [ref=f3e215] [cursor=pointer]:
+                - /url: /rustfs/console/site-replication/
+                - img [ref=f3e83]
+                - generic [ref=f3e85]: Site Replication
+            - listitem [ref=f3e86]:
+              - link [ref=f3e216] [cursor=pointer]:
+                - /url: /rustfs/console/tiers/
+                - img [ref=f3e88]
+                - generic [ref=f3e90]: Tiered Storage
+            - listitem [ref=f3e91]:
+              - link [ref=f3e217] [cursor=pointer]:
+                - /url: /rustfs/console/events-target/
+                - img [ref=f3e93]
+                - generic [ref=f3e95]: Event Destinations
+            - listitem [ref=f3e96]:
+              - link [ref=f3e218] [cursor=pointer]:
+                - /url: /rustfs/console/audit-target/
+                - img [ref=f3e98]
+                - generic [ref=f3e100]: Audit Targets
+            - listitem [ref=f3e101]:
+              - link [ref=f3e219] [cursor=pointer]:
+                - /url: /rustfs/console/sse/
+                - img [ref=f3e103]
+                - generic [ref=f3e105]: SSE Settings
+            - listitem [ref=f3e106]:
+              - link [ref=f3e220] [cursor=pointer]:
+                - /url: /rustfs/console/oidc/
+                - img [ref=f3e108]
+                - generic [ref=f3e110]: OIDC Settings
+            - listitem [ref=f3e111]:
+              - link [ref=f3e221] [cursor=pointer]:
+                - /url: /rustfs/console/settings/
+                - img [ref=f3e113]
+                - generic [ref=f3e115]: System Setting
+          - separator [ref=f3e116]
+        - list [ref=f3e119]:
+          - listitem [ref=f3e120]:
+            - link [ref=f3e222] [cursor=pointer]:
+              - /url: /rustfs/console/license/
+              - img [ref=f3e122]
+              - generic [ref=f3e124]: License
+          - listitem [ref=f3e125]:
+            - link [ref=f3e223] [cursor=pointer]:
+              - /url: https://docs.rustfs.com/
+              - img [ref=f3e127]
+              - generic [ref=f3e129]: Documentation
+              - img [ref=f3e130]
+      - generic [ref=f3e134]:
+        - generic [ref=f3e135]: RUSTFS
+        - generic [ref=f3e136]: v1.0.0-beta.8
+      - button [ref=f3e224]
+    - main [ref=f3e138]:
+      - generic [ref=f3e139]:
+        - generic [ref=f3e140]:
+          - generic [ref=f3e141]:
+            - button [ref=f3e225]:
+              - img
+              - generic [ref=f3e143]: Toggle Sidebar
+            - navigation [ref=f3e226]:
+              - list [ref=f3e145]:
+                - listitem [ref=f3e146]:
+                  - link [disabled] [ref=f3e227]: User Groups
+          - generic [ref=f3e148]:
+            - button [ref=f3e149]:
+              - img
+            - button [ref=f3e150]:
+              - img
+            - button [ref=f3e151]:
+              - link [ref=f3e152] [cursor=pointer]:
+                - /url: https://github.com/rustfs/console
+                - img
+            - button [ref=f3e153]:
+              - link [ref=f3e154] [cursor=pointer]:
+                - /url: https://x.com/rustfsofficial
+                - img
+            - button [ref=f3e228]:
+              - img [ref=f3e229]
+              - img
+        - generic [ref=f3e159]:
+          - generic [ref=f3e160]:
+            - heading [level=1] [ref=f3e230]: User Groups
+            - generic [ref=f3e163]:
+              - group [ref=f3e164]:
+                - group [ref=f3e165]:
+                  - img [ref=f3e166]
+                - textbox [ref=f3e231]:
+                  - /placeholder: Search User Group
+              - button [disabled]:
+                - img
+                - text: Assign Policy
+              - button [ref=f3e232]:
+                - img
+                - text: Add User Group
+          - generic [ref=f3e170]:
+            - table [ref=f3e173]:
+              - rowgroup [ref=f3e174]:
+                - row [ref=f3e233]:
+                  - columnheader [ref=f3e234]:
+                    - checkbox [ref=f3e235]
+                    - checkbox [ref=f3e236]
+                  - columnheader [ref=f3e237]:
+                    - button [ref=f3e238] [cursor=pointer]:
+                      - text: Name
+                      - img [ref=f3e181]
+                  - columnheader [ref=f3e239]: Actions
+              - rowgroup [ref=f3e184]:
+                - row [ref=f3e240]:
+                  - cell [ref=f3e241]:
+                    - generic [ref=f3e189]:
+                      - generic [ref=f3e190]: No Data
+                      - generic [ref=f3e191]: Create user groups to organize permissions
+            - generic [ref=f3e192]:
+              - generic [ref=f3e193]:
+                - generic [ref=f3e194]: Rows per page
+                - combobox [ref=f3e195]:
+                  - generic [ref=f3e196]: "10"
+                  - img
+                - textbox [ref=f3e197]: "10"
+              - generic [ref=f3e198]:
+                - generic [ref=f3e199]: Page 0 of 0
+                - generic [ref=f3e200]:
+                  - button [disabled]: First
+                  - button [disabled]: Prev
+                  - button [disabled]: Next
+                  - button [disabled]: Last
+  - region "Notifications alt+T"
+  - dialog "Add group members" [ref=f3e245]:
+    - heading "Add group members" [level=2] [ref=f3e247]
+    - generic [ref=f3e248]:
+      - group [ref=f3e249]:
+        - generic [ref=f3e250]: Name
+        - textbox [ref=f3e252]: testgroup-inspect
+      - group [ref=f3e253]:
+        - generic [ref=f3e254]: Users
+        - generic [ref=f3e255]:
+          - button "Users" [expanded] [ref=f3e256]:
+            - generic [ref=f3e257]: Select user group members
+            - img
+          - dialog [ref=f3e268]:
+            - generic [ref=f3e269]:
+              - group [ref=f3e272]:
+                - combobox [expanded] [active] [ref=f3e273]
+                - group [ref=f3e274]:
+                  - img [ref=f3e275]
+              - listbox "Suggestions" [ref=f3e277]:
+                - group [ref=f3e279]:
+                  - option "testuser-inspect" [selected] [ref=f3e280]:
+                    - img
+                    - generic [ref=f3e281]: testuser-inspect
+                    - img
+    - generic [ref=f3e258]:
+      - button "Cancel" [ref=f3e259]
+      - button "Submit" [ref=f3e260]
+    - button "Close" [ref=f3e261]:
+      - img
+      - generic [ref=f3e262]: Close

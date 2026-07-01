@@ -1,0 +1,78 @@
+services:
+  volume-permissions:
+    image: alpine:3.20
+    container_name: rustfs-volume-permissions-test
+    volumes:
+      - test-data0:/data/rustfs0
+      - test-data1:/data/rustfs1
+      - test-data2:/data/rustfs2
+      - test-data3:/data/rustfs3
+    command: sh -c "chown -R 10001:10001 /data/rustfs0 /data/rustfs1 /data/rustfs2 /data/rustfs3"
+    restart: "no"
+    networks:
+      - rustfs-test-net
+
+  rustfs:
+    image: rustfs/rustfs:latest
+    container_name: rustfs-test
+    environment:
+      RUSTFS_VOLUMES: "/data/rustfs{0...3}"
+      RUSTFS_ACCESS_KEY: rustfsadmin
+      RUSTFS_SECRET_KEY: rustfsadmin
+      RUSTFS_ADDRESS: "0.0.0.0:9000"
+      RUSTFS_CONSOLE_ADDRESS: "0.0.0.0:9001"
+      RUSTFS_CONSOLE_ENABLE: "true"
+      RUSTFS_UNSAFE_BYPASS_DISK_CHECK: "true"
+    volumes:
+      - test-data0:/data/rustfs0
+      - test-data1:/data/rustfs1
+      - test-data2:/data/rustfs2
+      - test-data3:/data/rustfs3
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:9000/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+      start_period: 10s
+    restart: "no"
+    depends_on:
+      volume-permissions:
+        condition: service_completed_successfully
+    networks:
+      - rustfs-test-net
+
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile.tests
+    container_name: rustfs-tests
+    environment:
+      # e2e (AWS SDK)
+      RUSTFS_ENDPOINT: http://rustfs:9000
+      AWS_ACCESS_KEY_ID: rustfsadmin
+      AWS_SECRET_ACCESS_KEY: rustfsadmin
+      AWS_DEFAULT_REGION: us-east-1
+      # playwright (GUI)
+      RUSTFS_CONSOLE_URL: http://rustfs:9001
+      RUSTFS_USERNAME: rustfsadmin
+      RUSTFS_PASSWORD: rustfsadmin
+      HEADLESS: "true"
+      NO_SANDBOX: "true"
+      TEARDOWN_ENABLED: "true"
+    volumes:
+      - ./reports:/tests/reports
+    depends_on:
+      rustfs:
+        condition: service_healthy
+    networks:
+      - rustfs-test-net
+
+networks:
+  rustfs-test-net:
+    driver: bridge
+
+volumes:
+  test-data0:
+  test-data1:
+  test-data2:
+  test-data3:

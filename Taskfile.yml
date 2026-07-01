@@ -1,0 +1,134 @@
+version: '3'
+
+tasks:
+  default:
+    desc: list all tasks
+    cmds:
+      - task --list
+
+  clean:
+    desc: remove generated test reports
+    cmds:
+      - rm -rf reports/
+
+  setup:
+    desc: install all tool dependencies (gotestsum, playwright browsers)
+    cmds:
+      - go install gotest.tools/gotestsum@latest
+      - cmd: go run github.com/mxschmitt/playwright-go/cmd/playwright@v0.6100.0 install --with-deps
+        dir: test/playwright-test
+
+  e2e-test:
+    desc: run all e2e test suites
+    dir: test/e2e
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v
+
+  e2e-test:bucket:
+    desc: run all bucket suites
+    dir: test/e2e
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestBucket
+
+  e2e-test:object:
+    desc: run all object suites
+    dir: test/e2e
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestObject
+
+  e2e-test:bucket:happy:
+    desc: run bucket happy flow suite
+    dir: test/e2e
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestBucketHappyFlowSuite
+
+  e2e-test:bucket:negative:
+    desc: run bucket negative flow suite
+    dir: test/e2e
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestBucketNegativeFlowSuite
+
+  e2e-test:object:happy:
+    desc: run object happy flow suite
+    dir: test/e2e
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestObjectHappyFlowSuite
+
+  e2e-test:object:negative:
+    desc: run object negative flow suite
+    dir: test/e2e
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestObjectNegativeFlowSuite
+
+  e2e-test:no-teardown:
+    desc: run all e2e suites with teardown disabled
+    dir: test/e2e
+    cmds:
+      - TEARDOWN_ENABLED=false gotestsum --format testdox -- -count=1 . -v
+
+  e2e-test:report:
+    desc: run all e2e suites and output JUnit XML report
+    dir: test/e2e
+    cmds:
+      - mkdir -p ../../reports
+      - gotestsum --format testdox --junitfile ../../reports/e2e.xml -- -count=1 . -v
+
+  pw-test:
+    desc: run all playwright GUI test suites
+    dir: test/playwright-test
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v
+
+  pw-test:login:
+    desc: run login suites
+    dir: test/playwright-test
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestLogin
+
+  pw-test:login:happy:
+    desc: run login happy flow suite
+    dir: test/playwright-test
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestLoginHappyFlowSuite
+
+  pw-test:login:negative:
+    desc: run login negative flow suite
+    dir: test/playwright-test
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestLoginNegativeFlowSuite
+
+  pw-test:bucket:
+    desc: run bucket management suites
+    dir: test/playwright-test
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestBucketManagement
+
+  pw-test:user:
+    desc: run user management suites
+    dir: test/playwright-test
+    cmds:
+      - gotestsum --format testdox -- -count=1 . -v -run TestUserManagement
+
+  pw-test:no-teardown:
+    desc: run all playwright suites with teardown disabled
+    dir: test/playwright-test
+    cmds:
+      - TEARDOWN_ENABLED=false gotestsum --format testdox -- -count=1 . -v
+
+  pw-test:report:
+    desc: run all playwright suites and output JUnit XML report
+    dir: test/playwright-test
+    cmds:
+      - mkdir -p ../../reports
+      - gotestsum --format testdox --junitfile ../../reports/pw.xml -- -count=1 . -v
+
+  test:report:
+    desc: run all suites (e2e + playwright) and output JUnit XML reports
+    cmds:
+      - task: e2e-test:report
+      - task: pw-test:report
+
+  docker-test:
+    desc: run all suites in Docker (containers remain after for inspection)
+    cmds:
+      - docker compose -f docker-compose.test.yml up --build --abort-on-container-exit

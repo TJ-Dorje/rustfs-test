@@ -1,0 +1,72 @@
+name: RustFS Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      rustfs:
+        image: rustfs/rustfs:latest
+        env:
+          RUSTFS_VOLUMES: "/data/rustfs0"
+          RUSTFS_ACCESS_KEY: rustfsadmin
+          RUSTFS_SECRET_KEY: rustfsadmin
+          RUSTFS_ADDRESS: "0.0.0.0:9000"
+          RUSTFS_CONSOLE_ADDRESS: "0.0.0.0:9001"
+          RUSTFS_CONSOLE_ENABLE: "true"
+          RUSTFS_UNSAFE_BYPASS_DISK_CHECK: "true"
+        ports:
+          - 9000:9000
+          - 9001:9001
+        options: >-
+          --health-cmd "curl -f http://127.0.0.1:9000/health"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 30
+          --health-start-period 10s
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: stable
+          cache-dependency-path: |
+            test/e2e/go.sum
+            test/playwright-test/go.sum
+
+      - name: Install Task
+        uses: arduino/setup-task@v2
+        with:
+          version: 3.x
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install gotestsum and Playwright browsers
+        run: task setup
+
+      - name: Run all tests
+        env:
+          RUSTFS_ENDPOINT: http://localhost:9000
+          AWS_ACCESS_KEY_ID: rustfsadmin
+          AWS_SECRET_ACCESS_KEY: rustfsadmin
+          AWS_DEFAULT_REGION: us-east-1
+          RUSTFS_CONSOLE_URL: http://localhost:9001
+          RUSTFS_USERNAME: rustfsadmin
+          RUSTFS_PASSWORD: rustfsadmin
+          HEADLESS: "true"
+          NO_SANDBOX: "true"
+          TEARDOWN_ENABLED: "true"
+        run: task test:report
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: reports/

@@ -1,0 +1,26 @@
+FROM golang:latest AS base
+
+# Install task CLI
+RUN sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+
+# Install gotestsum
+RUN go install gotest.tools/gotestsum@latest
+
+WORKDIR /tests
+
+# Download e2e deps (cached layer)
+COPY test/e2e/go.mod test/e2e/go.sum ./test/e2e/
+RUN cd test/e2e && go mod download
+
+# Download playwright deps (cached layer)
+COPY test/playwright-test/go.mod test/playwright-test/go.sum ./test/playwright-test/
+RUN cd test/playwright-test && go mod download
+
+# Install Chromium + system deps
+RUN cd test/playwright-test && go run github.com/mxschmitt/playwright-go/cmd/playwright install --with-deps chromium
+
+# Copy source
+COPY Taskfile.yml .
+COPY test/ ./test/
+
+CMD ["task", "test:report"]

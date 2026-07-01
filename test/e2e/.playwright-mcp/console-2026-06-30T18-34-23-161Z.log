@@ -1,0 +1,4 @@
+[     112ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://localhost:9001/rustfs/console/_next/static/chunks/0.nn9uq3e2.gt.js:0
+[     112ms] [ERROR] Failed to load resource: the server responded with a status of 403 (Forbidden) @ http://localhost:9001/android-chrome-192x192.png:0
+[     116ms] [WARNING] Error while trying to use the following icon from the Manifest: http://localhost:9001/android-chrome-192x192.png (Download error or resource isn't a valid image) @ http://localhost:9001/rustfs/console/users/:0
+[  134480ms] [VERBOSE] [DOM] Password field is not contained in a form: (More info: https://goo.gl/9p2vKq) %o @ http://localhost:9001/rustfs/console/users/:0

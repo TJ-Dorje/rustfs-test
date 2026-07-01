@@ -1,0 +1,231 @@
+- generic [active] [ref=f2e2]:
+  - alert [ref=f2e1]
+  - generic [ref=f2e3]:
+    - generic [ref=f2e6]:
+      - link "RustFS" [ref=f2e298] [cursor=pointer]:
+        - /url: /rustfs/console/browser/
+        - img "RustFS" [ref=f2e299]
+      - generic [ref=f2e13]:
+        - generic [ref=f2e14]:
+          - list [ref=f2e16]:
+            - listitem [ref=f2e17]:
+              - link "Browser" [ref=f2e300] [cursor=pointer]:
+                - /url: /rustfs/console/browser/
+                - img [ref=f2e19]
+                - generic [ref=f2e21]: Browser
+            - listitem [ref=f2e22]:
+              - link "Access Keys" [ref=f2e301] [cursor=pointer]:
+                - /url: /rustfs/console/access-keys/
+                - img [ref=f2e24]
+                - generic [ref=f2e26]: Access Keys
+            - listitem [ref=f2e27]:
+              - link "Policies" [ref=f2e302] [cursor=pointer]:
+                - /url: /rustfs/console/policies/
+                - img [ref=f2e29]
+                - generic [ref=f2e31]: Policies
+            - listitem [ref=f2e32]:
+              - link "Users" [ref=f2e303] [cursor=pointer]:
+                - /url: /rustfs/console/users/
+                - img [ref=f2e34]
+                - generic [ref=f2e36]: Users
+            - listitem [ref=f2e37]:
+              - link "User Groups" [ref=f2e304] [cursor=pointer]:
+                - /url: /rustfs/console/user-groups/
+                - img [ref=f2e39]
+                - generic [ref=f2e41]: User Groups
+            - listitem [ref=f2e42]:
+              - link "Import/Export" [ref=f2e305] [cursor=pointer]:
+                - /url: /rustfs/console/import-export/
+                - img [ref=f2e44]
+                - generic [ref=f2e46]: Import/Export
+            - listitem [ref=f2e47]:
+              - link "Running Status" [ref=f2e306] [cursor=pointer]:
+                - /url: /rustfs/console/status/
+                - img [ref=f2e49]
+                - generic [ref=f2e51]: Running Status
+            - listitem [ref=f2e52]:
+              - link "Rebalance" [ref=f2e307] [cursor=pointer]:
+                - /url: /rustfs/console/rebalance/
+                - img [ref=f2e54]
+                - generic [ref=f2e56]: Rebalance
+            - listitem [ref=f2e57]:
+              - link "Pool Decommission" [ref=f2e308] [cursor=pointer]:
+                - /url: /rustfs/console/pool-decommission/
+                - img [ref=f2e59]
+                - generic [ref=f2e61]: Pool Decommission
+          - separator [ref=f2e62]
+        - generic [ref=f2e63]:
+          - list [ref=f2e65]:
+            - listitem [ref=f2e66]:
+              - link "Bucket Events" [ref=f2e309] [cursor=pointer]:
+                - /url: /rustfs/console/events/
+                - img [ref=f2e68]
+                - generic [ref=f2e70]: Bucket Events
+            - listitem [ref=f2e71]:
+              - link "Bucket Replication" [ref=f2e310] [cursor=pointer]:
+                - /url: /rustfs/console/replication/
+                - img [ref=f2e73]
+                - generic [ref=f2e75]: Bucket Replication
+            - listitem [ref=f2e76]:
+              - link "Lifecycle" [ref=f2e311] [cursor=pointer]:
+                - /url: /rustfs/console/lifecycle/
+                - img [ref=f2e78]
+                - generic [ref=f2e80]: Lifecycle
+            - listitem [ref=f2e81]:
+              - link "Site Replication" [ref=f2e312] [cursor=pointer]:
+                - /url: /rustfs/console/site-replication/
+                - img [ref=f2e83]
+                - generic [ref=f2e85]: Site Replication
+            - listitem [ref=f2e86]:
+              - link "Tiered Storage" [ref=f2e313] [cursor=pointer]:
+                - /url: /rustfs/console/tiers/
+                - img [ref=f2e88]
+                - generic [ref=f2e90]: Tiered Storage
+            - listitem [ref=f2e91]:
+              - link "Event Destinations" [ref=f2e314] [cursor=pointer]:
+                - /url: /rustfs/console/events-target/
+                - img [ref=f2e93]
+                - generic [ref=f2e95]: Event Destinations
+            - listitem [ref=f2e96]:
+              - link "Audit Targets" [ref=f2e315] [cursor=pointer]:
+                - /url: /rustfs/console/audit-target/
+                - img [ref=f2e98]
+                - generic [ref=f2e100]: Audit Targets
+            - listitem [ref=f2e101]:
+              - link "SSE Settings" [ref=f2e316] [cursor=pointer]:
+                - /url: /rustfs/console/sse/
+                - img [ref=f2e103]
+                - generic [ref=f2e105]: SSE Settings
+            - listitem [ref=f2e106]:
+              - link "OIDC Settings" [ref=f2e317] [cursor=pointer]:
+                - /url: /rustfs/console/oidc/
+                - img [ref=f2e108]
+                - generic [ref=f2e110]: OIDC Settings
+            - listitem [ref=f2e111]:
+              - link "System Setting" [ref=f2e318] [cursor=pointer]:
+                - /url: /rustfs/console/settings/
+                - img [ref=f2e113]
+                - generic [ref=f2e115]: System Setting
+          - separator [ref=f2e116]
+        - list [ref=f2e119]:
+          - listitem [ref=f2e120]:
+            - link "License" [ref=f2e319] [cursor=pointer]:
+              - /url: /rustfs/console/license/
+              - img [ref=f2e122]
+              - generic [ref=f2e124]: License
+          - listitem [ref=f2e125]:
+            - link "Documentation" [ref=f2e320] [cursor=pointer]:
+              - /url: https://docs.rustfs.com/
+              - img [ref=f2e127]
+              - generic [ref=f2e129]: Documentation
+              - img [ref=f2e130]
+      - generic [ref=f2e134]:
+        - generic [ref=f2e135]: RUSTFS
+        - generic [ref=f2e136]: v1.0.0-beta.8
+      - button "Toggle Sidebar" [ref=f2e321]
+    - main [ref=f2e138]:
+      - generic [ref=f2e139]:
+        - generic [ref=f2e140]:
+          - generic [ref=f2e141]:
+            - button "Toggle Sidebar" [ref=f2e322]:
+              - img
+              - generic [ref=f2e143]: Toggle Sidebar
+            - navigation "breadcrumb" [ref=f2e323]:
+              - list [ref=f2e145]:
+                - listitem [ref=f2e146]:
+                  - link "Users" [disabled] [ref=f2e324]
+          - generic [ref=f2e148]:
+            - button [ref=f2e149]:
+              - img
+            - button [ref=f2e150]:
+              - img
+            - button [ref=f2e151]:
+              - link [ref=f2e152] [cursor=pointer]:
+                - /url: https://github.com/rustfs/console
+                - img
+            - button [ref=f2e153]:
+              - link [ref=f2e154] [cursor=pointer]:
+                - /url: https://x.com/rustfsofficial
+                - img
+            - button "RustFS" [ref=f2e325]:
+              - img "RustFS" [ref=f2e326]
+              - img
+        - generic [ref=f2e159]:
+          - generic [ref=f2e160]:
+            - heading "Users" [level=1] [ref=f2e327]
+            - generic [ref=f2e163]:
+              - group [ref=f2e164]:
+                - group [ref=f2e165]:
+                  - img [ref=f2e166]
+                - textbox "Search Access User" [ref=f2e328]
+              - button "Delete Selected" [disabled]:
+                - img
+                - text: Delete Selected
+              - button "Add to Group" [disabled]:
+                - img
+                - text: Add to Group
+              - button "Add User" [ref=f2e329]:
+                - img
+                - text: Add User
+          - generic [ref=f2e170]:
+            - table [ref=f2e173]:
+              - rowgroup [ref=f2e174]:
+                - row "Select all Name Policy Name Status Member Of Updated At Actions" [ref=f2e330]:
+                  - columnheader "Select all" [ref=f2e331]:
+                    - checkbox "Select all" [ref=f2e332]
+                    - checkbox [ref=f2e333]
+                  - columnheader "Name" [ref=f2e334]:
+                    - button "Name" [ref=f2e335] [cursor=pointer]:
+                      - text: Name
+                      - img [ref=f2e181]
+                  - columnheader "Policy Name" [ref=f2e336]:
+                    - button "Policy Name" [ref=f2e337] [cursor=pointer]:
+                      - text: Policy Name
+                      - img [ref=f2e185]
+                  - columnheader "Status" [ref=f2e338]:
+                    - button "Status" [ref=f2e339] [cursor=pointer]:
+                      - text: Status
+                      - img [ref=f2e189]
+                  - columnheader "Member Of" [ref=f2e340]:
+                    - button "Member Of" [ref=f2e341] [cursor=pointer]:
+                      - text: Member Of
+                      - img [ref=f2e193]
+                  - columnheader "Updated At" [ref=f2e342]:
+                    - button "Updated At" [ref=f2e343] [cursor=pointer]:
+                      - text: Updated At
+                      - img [ref=f2e197]
+                  - columnheader "Actions" [ref=f2e344]
+              - rowgroup [ref=f2e200]:
+                - row "Select row testuser-inspect Enabled 2026-06-30 20:37:26 Edit Delete" [ref=f2e345]:
+                  - cell "Select row" [ref=f2e346]:
+                    - checkbox "Select row" [ref=f2e347]
+                    - checkbox [ref=f2e348]
+                  - cell "testuser-inspect" [ref=f2e349]
+                  - cell [ref=f2e350]
+                  - cell "Enabled" [ref=f2e351]:
+                    - generic [ref=f2e352]: Enabled
+                  - cell [ref=f2e353]
+                  - cell "2026-06-30 20:37:26" [ref=f2e354]
+                  - cell "Edit Delete" [ref=f2e355]:
+                    - generic [ref=f2e356]:
+                      - button "Edit" [ref=f2e357]:
+                        - img
+                        - generic [ref=f2e358]: Edit
+                      - button "Delete" [ref=f2e359]:
+                        - img
+                        - generic [ref=f2e360]: Delete
+            - generic [ref=f2e208]:
+              - generic [ref=f2e209]:
+                - generic [ref=f2e210]: Rows per page
+                - combobox [ref=f2e211]:
+                  - generic [ref=f2e212]: "10"
+                  - img
+                - textbox [ref=f2e213]: "10"
+              - generic [ref=f2e214]:
+                - generic [ref=f2e215]: Page 1 of 1
+                - generic [ref=f2e216]:
+                  - button "First" [disabled]
+                  - button "Prev" [disabled]
+                  - button "Next" [disabled]
+                  - button "Last" [disabled]
+  - region "Notifications alt+T"
