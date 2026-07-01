@@ -14,6 +14,10 @@ User and group management is intentionally offloaded to the Playwright GUI test 
 - Object operations: upload, download, delete, list, lifecycle
 - Negative paths: non-existent resources, duplicate creation, constraint violations
 
+### Environment constraint
+
+RustFS was run locally with `RUSTFS_UNSAFE_BYPASS_DISK_CHECK=true` — bypassing the disk validation required for erasure coding in a proper multi-disk setup. As a result, critical data plane behaviors such as redundancy, disk failure recovery, and replication are not covered and cannot be claimed tested. A proper cluster environment would be required to validate those flows.
+
 ### Limitations
 
 The items below represent areas to extend coverage. They were identified through exploratory testing and general knowledge of S3-compatible storage solutions — not from deep review of RustFS documentation.
