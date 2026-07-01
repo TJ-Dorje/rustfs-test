@@ -24,6 +24,10 @@ The items below represent areas to extend coverage. They were identified through
 - No policy assignment to users or groups
 - No CORS or bucket policy configuration via UI
 
+## Browser lifecycle
+
+A single Chromium browser instance is shared across all test suites, initialized once in `main_test.go` and closed after all suites complete. This is sufficient for the current number of suites. For better isolation — where one suite's failure cannot affect others — the browser instance should be managed within each suite individually using `t.Cleanup`.
+
 ## Approach
 
 The structure does not implement the Screenplay pattern directly, but follows an **action-based approach** as a practical approximation.
